@@ -1,16 +1,16 @@
 # Jetpack Compose 사용하기
 
 Created By: PilJu BAE
-Last Edited: Jul 4, 2020 10:02 PM
+
 Links: https://youtu.be/U5BwfqBpiWU
-events: Sessions, android11
+
 
 # Compose?
 
 ```kotlin
 @Composable
 fun ProductLabel(product: Product) {
-		Text("${product.quentity}x ${product.name}")
+	Text("${product.quentity}x ${product.name}")
 }
 ```
 
@@ -41,9 +41,9 @@ UI는 데이터의 함수 : 데이터가 비즈니스 로직에서 함수까지 
 ```kotlin
 @Composable
 fun ProductLabel(product: Product) {
-		if ( product.quantity > 0 ) {
-				Text("${product.quentity}x ${product.name}")
-		}
+	if ( product.quantity > 0 ) {
+			Text("${product.quentity}x ${product.name}")
+	}
 }
 ```
 
@@ -112,16 +112,16 @@ Modifiers로 할 수 있는 것이 일반 컴포저블로도 할 수 있었음. 
 ```kotlin
 @Composable
 fun ShoppingCart(
-		shoppingCart: LiveData<List<Product>> //RXJava or Flow도 지원 가능
+	shoppingCart: LiveData<List<Product>> //RXJava or Flow도 지원 가능
 ) {
-		val products by shoppingCart.**observeAsState(emptyList())**
-		**AdapterList**(
-					data = products
-		) { product ->
-				ShoppingCartItem(product) {
-						Viewer3d(product)
-				}
-		}
+	val products by shoppingCart.**observeAsState(emptyList())**
+	**AdapterList**(
+				data = products
+	) { product ->
+			ShoppingCartItem(product) {
+					Viewer3d(product)
+			}
+	}
 }
 ```
 
@@ -134,28 +134,28 @@ fun ShoppingCart(
 ```kotlin
 @Composable
 fun ShoppingCartItemRow(/* ... */) {
-		ConstraintLayout(
-				constraintSet = ConstraintSet { // 완전히 코드로 정의 가능
-						
-						// tag가 제약조건을 개체로 반환하므로 다른 제약조건에서 참조로 사용할 수 있다.
-						// 첫 번째 왼쪽 감소 단추의 constraint 지정
-						val decreaseConstraint = tag(DecreaseTag).apply { // tag 지정
-								// tag 안에 제약조건을 스스로 선언할 수 있음
-								left constraintTo parent.left
-								centerVertically()
-						}
+	ConstraintLayout(
+			constraintSet = ConstraintSet { // 완전히 코드로 정의 가능
 
-						// 버튼을 만들고 태그를 지정하면 constraint를 composable과 일치시킴
-						// 오른쪽 다음 단추의 새로운 태그 생성
-						val increaseConstraint = tag(IncreaseTag).apply {
-								left constraintTo decreaseConstraint.right
-								left.margin = 4.dp
-								centerVertically()
-						}
-				}
-		) {
-			// ...
-		}
+					// tag가 제약조건을 개체로 반환하므로 다른 제약조건에서 참조로 사용할 수 있다.
+					// 첫 번째 왼쪽 감소 단추의 constraint 지정
+					val decreaseConstraint = tag(DecreaseTag).apply { // tag 지정
+							// tag 안에 제약조건을 스스로 선언할 수 있음
+							left constraintTo parent.left
+							centerVertically()
+					}
+
+					// 버튼을 만들고 태그를 지정하면 constraint를 composable과 일치시킴
+					// 오른쪽 다음 단추의 새로운 태그 생성
+					val increaseConstraint = tag(IncreaseTag).apply {
+							left constraintTo decreaseConstraint.right
+							left.margin = 4.dp
+							centerVertically()
+					}
+			}
+	) {
+		// ...
+	}
 }
 ```
 
@@ -166,26 +166,26 @@ fun ShoppingCartItemRow(/* ... */) {
 ```kotlin
 @Composable
 fun ShoppingCartItemRow(/* ... */) {
-		ConstraintLayout(
-				constraintSet = ConstraintSet { 
-						// ...
-						//일부 항목에서만 나타나는 라벨과 빨간색 스위치을 오른쪽으로 맞추려면?
-						tag(AmoutTag).apply {
-								// swatch 가 있으면 swatch의 constraint를 사용하고, 
-								// 없다면 전 라벨의 constraint를 사용하겠다.
-								left constraintTo (if (hasSwatch) colorConstraint 
-																	 else labelConstraint).right
-								horizontalBias = 1.0f
-								centerVertically()
-						}
-				}
-		) {
-			// ...
-			Text (
-					modifier = Modifier.tag(AmountTag), 
-					text = formatAmount(product)
-			)
-		}
+	ConstraintLayout(
+			constraintSet = ConstraintSet { 
+					// ...
+					//일부 항목에서만 나타나는 라벨과 빨간색 스위치을 오른쪽으로 맞추려면?
+					tag(AmoutTag).apply {
+							// swatch 가 있으면 swatch의 constraint를 사용하고, 
+							// 없다면 전 라벨의 constraint를 사용하겠다.
+							left constraintTo (if (hasSwatch) colorConstraint 
+																 else labelConstraint).right
+							horizontalBias = 1.0f
+							centerVertically()
+					}
+			}
+	) {
+		// ...
+		Text (
+				modifier = Modifier.tag(AmountTag), 
+				text = formatAmount(product)
+		)
+	}
 }
 ```
 
@@ -207,20 +207,20 @@ val tlRadius = animate(if (selected) 48.dp else 8.dp)
 val radius = animate(if (selected) 0.dp else 8.dp)
 
 Surface(
-		shape = RoundedCornerShape(
-				topLeft = rlRadius,
-				topRight = radius, bottomLeft = radius, bottomRight = radius
-		)
+	shape = RoundedCornerShape(
+			topLeft = rlRadius,
+			topRight = radius, bottomLeft = radius, bottomRight = radius
+	)
 ) {
-		// selected 상태를 값으로 부여하고 onSelected lambda 값이 바뀔때마다 호출
-		Toggleable(
-				value = selected,
-				onValuedChange = onSelected,
-				//ripple 효과
-				modifier = Modifier.ripple()
-		) {
-				//...
-		}
+	// selected 상태를 값으로 부여하고 onSelected lambda 값이 바뀔때마다 호출
+	Toggleable(
+			value = selected,
+			onValuedChange = onSelected,
+			//ripple 효과
+			modifier = Modifier.ripple()
+	) {
+			//...
+	}
 
 ```
 
@@ -236,31 +236,31 @@ Surface(
 //3d viewer 
 @Composable
 fun Viewer3d(product: Product) {
-		var modelViewer by state<ModelViewer?> { null }
-		
-		// 원하는 UI 트리에 컴포저블이 처음 추가될 때 호출
-		onActive {
-				// Setup Choreographer callback
-				// 화면을 새로 고칠 때마다 모든 프레임이 호출할 수 있도록 
-				onDispose {
-						// composable이 트리에서 사라지면 정리하는 곳
-						// Remove Choreographer callback
-						// adapterlist와 같은 경우 옳은 일을 하고 있는 지 확인할 수 있음
-				}
-		}
+	var modelViewer by state<ModelViewer?> { null }
 
-		onCommit(product) {
-				// 데이터변경에 대응해서 색상을 변경함 
-				// Setproduct color on 3D scene
-		}
+	// 원하는 UI 트리에 컴포저블이 처음 추가될 때 호출
+	onActive {
+			// Setup Choreographer callback
+			// 화면을 새로 고칠 때마다 모든 프레임이 호출할 수 있도록 
+			onDispose {
+					// composable이 트리에서 사라지면 정리하는 곳
+					// Remove Choreographer callback
+					// adapterlist와 같은 경우 옳은 일을 하고 있는 지 확인할 수 있음
+			}
+	}
 
-		// composable AndroidView function
-		// xml 레이아웃을 위한 id 를 매개변수로 제공
-		AndroidView(R.layout.surface_3d) { view -> 
-				surfaceView = view as SurfaceView
-				// 3d 애니메이션을 렌더링 하려면 서피스뷰를 새로 고쳐야 함
-				modelViewer = setupModelViewer(surfaceView)
-		}
+	onCommit(product) {
+			// 데이터변경에 대응해서 색상을 변경함 
+			// Setproduct color on 3D scene
+	}
+
+	// composable AndroidView function
+	// xml 레이아웃을 위한 id 를 매개변수로 제공
+	AndroidView(R.layout.surface_3d) { view -> 
+			surfaceView = view as SurfaceView
+			// 3d 애니메이션을 렌더링 하려면 서피스뷰를 새로 고쳐야 함
+			modelViewer = setupModelViewer(surfaceView)
+	}
 }
 ```
 
@@ -279,21 +279,21 @@ Compose 안에서는 함수들에 적용하고 있기 때문에 위젯을 참조
 ```kotlin
 @Composable
 fun ShoppingCartItem(
-		product: Product,
-		decrease: (product) -> Unit = { }
+	product: Product,
+	decrease: (product) -> Unit = { }
 ) {
-		//...
-		
-		Row {
-				// tag가 포함된 시멘틱 노드 생성
-				// UI의 해당 부분을 식별하는 방법이고, 테스트하고 싶은 버튼만 포함시킨다.
-				**TestTag(tag = Tags.ShoppingCartItemDecrease) {**
-						SmallButton(onClick = decrease(product) }) {
-								Image(Icons.Sharp.Remove)
-						}
-				}
-				//...
-		}
+	//...
+
+	Row {
+			// tag가 포함된 시멘틱 노드 생성
+			// UI의 해당 부분을 식별하는 방법이고, 테스트하고 싶은 버튼만 포함시킨다.
+			**TestTag(tag = Tags.ShoppingCartItemDecrease) {**
+					SmallButton(onClick = decrease(product) }) {
+							Image(Icons.Sharp.Remove)
+					}
+			}
+			//...
+	}
 }
 ```
 
@@ -301,25 +301,25 @@ fun ShoppingCartItem(
 // 2개의 수량에서 사용자가 버튼을 클릭할 때마다 1개씩 수량을 줄이는 테스트
 @Test
 fun changeQuantity() {
-		var product = Product(quentity = 2)
-		val decrease: (Product) -> Unit = { 
-				product = it.copy(quantity = it.quantity - 1) 
-		}
-		
-		composeTestRule.setContent {
-				ShoppingCartItem(
-					product = product,
-					decrease = decrease
-				)
-		}
+	var product = Product(quentity = 2)
+	val decrease: (Product) -> Unit = { 
+			product = it.copy(quantity = it.quantity - 1) 
+	}
 
-		**findByTag(Tags.ShoppingCartItemDecrease)
-				.doClick()
-				.doClick()
+	composeTestRule.setContent {
+			ShoppingCartItem(
+				product = product,
+				decrease = decrease
+			)
+	}
 
-		runOnIdleCompose {
-				assertThat(product.quentity).isEqualTo(0)
-		}**
+	**findByTag(Tags.ShoppingCartItemDecrease)
+			.doClick()
+			.doClick()
+
+	runOnIdleCompose {
+			assertThat(product.quentity).isEqualTo(0)
+	}**
 }
 ```
 
