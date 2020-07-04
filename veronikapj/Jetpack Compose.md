@@ -42,7 +42,7 @@ UI는 데이터의 함수 : 데이터가 비즈니스 로직에서 함수까지 
 @Composable
 fun ProductLabel(product: Product) {
 	if ( product.quantity > 0 ) {
-			Text("${product.quentity}x ${product.name}")
+		Text("${product.quentity}x ${product.name}")
 	}
 }
 ```
