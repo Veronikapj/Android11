@@ -24,7 +24,7 @@ Composable 함수는 Composable 함수에서만 호출 가능
 
 # Compose function paradigm
 
-![Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled.png](Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled.png)
+![Jetpack%20Compose/Untitled.png](Jetpack%20Compose/Untitled.png)
 
 Composable은 데이터를 가져와 UI로 변환하는 함수일 뿐
 
@@ -51,7 +51,7 @@ UI를 업데이트하는 방식이 아니라 원하는 UI를 설정하는 방식
 
 # Compose 작동 방식
 
-![Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%201.png](Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%201.png)
+![Jetpack%20Compose/Untitled%201.png](Jetpack%20Compose/Untitled%201.png)
 
 ## Development Host
 
@@ -87,7 +87,7 @@ UI를 업데이트하는 방식이 아니라 원하는 UI를 설정하는 방식
 
 # Jetpack Compose의 도구
 
-![Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Jetpack_Compose__7-31_screenshot.png](Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Jetpack_Compose__7-31_screenshot.png)
+![Jetpack%20Compose/Jetpack_Compose__7-31_screenshot.png](Jetpack%20Compose/Jetpack_Compose__7-31_screenshot.png)
 
 왼쪽 - 내장 에뮬레이터
 
@@ -97,17 +97,17 @@ UI를 업데이트하는 방식이 아니라 원하는 UI를 설정하는 방식
 
 # Modifiers
 
-![Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%202.png](Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%202.png)
+![Jetpack%20Compose/Untitled%202.png](Jetpack%20Compose/Untitled%202.png)
 
 개발자 프리뷰 1에 처음 소개 
 
 Modifiers로 할 수 있는 것이 일반 컴포저블로도 할 수 있었음. (ex padding)
 
-![Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Jetpack_Compose__10-6_screenshot.png](Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Jetpack_Compose__10-6_screenshot.png)
+![Jetpack%20Compose/Jetpack_Compose__10-6_screenshot.png](Jetpack%20Compose/Jetpack_Compose__10-6_screenshot.png)
 
 # Lists
 
-![Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%203.png](Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%203.png)
+![Jetpack%20Compose/Untitled%203.png](Jetpack%20Compose/Untitled%203.png)
 
 ```kotlin
 @Composable
@@ -116,11 +116,10 @@ fun ShoppingCart(
 ) {
 	val products by shoppingCart.**observeAsState(emptyList())**
 	**AdapterList**(
-				data = products
-	) { product ->
-			ShoppingCartItem(product) {
-					Viewer3d(product)
-			}
+		data = products
+	) { product -> ShoppingCartItem(product) { 
+			Viewer3d(product) 
+		} 
 	}
 }
 ```
@@ -129,7 +128,7 @@ fun ShoppingCart(
 
 ## ContractLayout을 Compose와 쓰는 방법
 
-![Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%204.png](Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%204.png)
+![Jetpack%20Compose/Untitled%204.png](Jetpack%20Compose/Untitled%204.png)
 
 ```kotlin
 @Composable
@@ -161,29 +160,29 @@ fun ShoppingCartItemRow(/* ... */) {
 
 ## 약간의 로직을 추가할 수 있다면?
 
-![Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%205.png](Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%205.png)
+![Jetpack%20Compose/Untitled%205.png](Jetpack%20Compose/Untitled%205.png)
 
 ```kotlin
 @Composable
 fun ShoppingCartItemRow(/* ... */) {
 	ConstraintLayout(
-			constraintSet = ConstraintSet { 
-					// ...
-					//일부 항목에서만 나타나는 라벨과 빨간색 스위치을 오른쪽으로 맞추려면?
-					tag(AmoutTag).apply {
-							// swatch 가 있으면 swatch의 constraint를 사용하고, 
-							// 없다면 전 라벨의 constraint를 사용하겠다.
-							left constraintTo (if (hasSwatch) colorConstraint 
-																 else labelConstraint).right
-							horizontalBias = 1.0f
-							centerVertically()
-					}
+		constraintSet = ConstraintSet { 
+			// ...
+			//일부 항목에서만 나타나는 라벨과 빨간색 스위치을 오른쪽으로 맞추려면?
+			tag(AmoutTag).apply {
+					// swatch 가 있으면 swatch의 constraint를 사용하고, 
+					// 없다면 전 라벨의 constraint를 사용하겠다.
+					left constraintTo (if (hasSwatch) colorConstraint 
+															else labelConstraint).right
+					horizontalBias = 1.0f
+					centerVertically()
 			}
+		}
 	) {
 		// ...
 		Text (
-				modifier = Modifier.tag(AmountTag), 
-				text = formatAmount(product)
+			modifier = Modifier.tag(AmountTag), 
+			text = formatAmount(product)
 		)
 	}
 }
@@ -193,7 +192,7 @@ xml 과 코드를 동시에 사용하는 것보다 훨씬 편리해진다.
 
 # Animation
 
-![Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%206.png](Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%206.png)
+![Jetpack%20Compose/Untitled%206.png](Jetpack%20Compose/Untitled%206.png)
 
 ```kotlin
 // 쇼핑 카트 중 하나를 선택할 때마다 반지름 애니메이션 적용
@@ -208,25 +207,25 @@ val radius = animate(if (selected) 0.dp else 8.dp)
 
 Surface(
 	shape = RoundedCornerShape(
-			topLeft = rlRadius,
-			topRight = radius, bottomLeft = radius, bottomRight = radius
+		topLeft = rlRadius,
+		topRight = radius, bottomLeft = radius, bottomRight = radius
 	)
 ) {
 	// selected 상태를 값으로 부여하고 onSelected lambda 값이 바뀔때마다 호출
 	Toggleable(
-			value = selected,
-			onValuedChange = onSelected,
-			//ripple 효과
-			modifier = Modifier.ripple()
+		value = selected,
+		onValuedChange = onSelected,
+		//ripple 효과
+		modifier = Modifier.ripple()
 	) {
-			//...
+		//...
 	}
 
 ```
 
 # Interoperability
 
-![Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%207.png](Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Untitled%207.png)
+![Jetpack%20Compose/Untitled%207.png](Jetpack%20Compose/Untitled%207.png)
 
 3D 렌더링 
 
@@ -240,26 +239,26 @@ fun Viewer3d(product: Product) {
 
 	// 원하는 UI 트리에 컴포저블이 처음 추가될 때 호출
 	onActive {
-			// Setup Choreographer callback
-			// 화면을 새로 고칠 때마다 모든 프레임이 호출할 수 있도록 
-			onDispose {
-					// composable이 트리에서 사라지면 정리하는 곳
-					// Remove Choreographer callback
-					// adapterlist와 같은 경우 옳은 일을 하고 있는 지 확인할 수 있음
-			}
+		// Setup Choreographer callback
+		// 화면을 새로 고칠 때마다 모든 프레임이 호출할 수 있도록 
+		onDispose {
+			// composable이 트리에서 사라지면 정리하는 곳
+			// Remove Choreographer callback
+			// adapterlist와 같은 경우 옳은 일을 하고 있는 지 확인할 수 있음
+		}
 	}
 
 	onCommit(product) {
-			// 데이터변경에 대응해서 색상을 변경함 
-			// Setproduct color on 3D scene
+		// 데이터변경에 대응해서 색상을 변경함 
+		// Setproduct color on 3D scene
 	}
 
 	// composable AndroidView function
 	// xml 레이아웃을 위한 id 를 매개변수로 제공
 	AndroidView(R.layout.surface_3d) { view -> 
-			surfaceView = view as SurfaceView
-			// 3d 애니메이션을 렌더링 하려면 서피스뷰를 새로 고쳐야 함
-			modelViewer = setupModelViewer(surfaceView)
+		surfaceView = view as SurfaceView
+		// 3d 애니메이션을 렌더링 하려면 서피스뷰를 새로 고쳐야 함
+		modelViewer = setupModelViewer(surfaceView)
 	}
 }
 ```
@@ -285,14 +284,14 @@ fun ShoppingCartItem(
 	//...
 
 	Row {
-			// tag가 포함된 시멘틱 노드 생성
-			// UI의 해당 부분을 식별하는 방법이고, 테스트하고 싶은 버튼만 포함시킨다.
-			**TestTag(tag = Tags.ShoppingCartItemDecrease) {**
-					SmallButton(onClick = decrease(product) }) {
-							Image(Icons.Sharp.Remove)
-					}
-			}
-			//...
+		// tag가 포함된 시멘틱 노드 생성
+		// UI의 해당 부분을 식별하는 방법이고, 테스트하고 싶은 버튼만 포함시킨다.
+		**TestTag(tag = Tags.ShoppingCartItemDecrease) {**
+				SmallButton(onClick = decrease(product) }) {
+						Image(Icons.Sharp.Remove)
+				}
+		}
+		//...
 	}
 }
 ```
@@ -303,24 +302,24 @@ fun ShoppingCartItem(
 fun changeQuantity() {
 	var product = Product(quentity = 2)
 	val decrease: (Product) -> Unit = { 
-			product = it.copy(quantity = it.quantity - 1) 
+		product = it.copy(quantity = it.quantity - 1) 
 	}
 
 	composeTestRule.setContent {
-			ShoppingCartItem(
-				product = product,
-				decrease = decrease
-			)
+		ShoppingCartItem(
+			product = product,
+			decrease = decrease
+		)
 	}
 
 	**findByTag(Tags.ShoppingCartItemDecrease)
-			.doClick()
-			.doClick()
+		.doClick()
+		.doClick()
 
 	runOnIdleCompose {
-			assertThat(product.quentity).isEqualTo(0)
+		assertThat(product.quentity).isEqualTo(0)
 	}**
 }
 ```
 
-![Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Jetpack_Compose__23-27_screenshot.png](Jetpack%20Compose%204731f9e1486346fda37e11d83f802c4b/Jetpack_Compose__23-27_screenshot.png)
+![Jetpack%20Compose/Jetpack_Compose__23-27_screenshot.png](Jetpack%20Compose/Jetpack_Compose__23-27_screenshot.png)
