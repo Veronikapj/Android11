@@ -1,9 +1,8 @@
 # Screens - large, small, and foldable
 
-Created By: PilJu BAE
-Last Edited: Jul 12, 2020 9:55 AM
 Links: https://youtu.be/llHMxCz2Jig
-events: Sessions, android11
+
+
 
 # Overview
 
@@ -22,13 +21,13 @@ events: Sessions, android11
 ## More Screen Space
 
 ![Screens%20large%20small%20and%20foldable/_2020-07-12__1.30.16.png](Screens%20large%20small%20and%20foldable/_2020-07-12__1.30.16.png)
-
 1. 기존 휴대전화 사이즈에서는 필요한 최소한의 요소의 배치만 고려
 2. 더 큰 화면에 맞는 개별 요소의 크기를 확대
 3. 마스터 디테일 네비게이션 패턴을 사용해서 다른 화면 사이를 쉽게 탐색하는 방법을 제공(왼쪽)
 4. 이용 가능한 공간을 단축키로 설정하여 좋아할 만한 기능에 쉽게 접근할 수 있도록(오른쪽)
 
 이는 화면의 어긋남을 줄일 수 있고 사용자가 중심이 되는 주요 콘텐츠나 공간을 막는 행위를 피할 수 있다.
+
 
 ## Hinge
 
@@ -48,6 +47,8 @@ events: Sessions, android11
 
 ![Screens%20large%20small%20and%20foldable/_2020-07-12__9.03.48.png](Screens%20large%20small%20and%20foldable/_2020-07-12__9.03.48.png)
 
+
+
 ## Multi-tasking
 
 화면이 클수록 사람들이 여러 창을 사용
@@ -55,6 +56,8 @@ events: Sessions, android11
 1. 앱 창의 사이즈가 변경 가능하며 여러 창을 처리할 수 있도록 
 2. 데스크톱 같은 윈도우 설정 환경에서도  전자 펜으로 끌어서 놓기나 커서 같은 다양한 기능에 대한 지원
 3. 키보드와 마우스에 대한 지원
+
+
 
 ## Multi-instance
 
@@ -73,6 +76,8 @@ events: Sessions, android11
 
 ![Screens%20large%20small%20and%20foldable/_2020-07-12__9.17.42.png](Screens%20large%20small%20and%20foldable/_2020-07-12__9.17.42.png)
 
+
+
 # Jetpack Window Manager
 
 https://goo.gle/window-manager-blog
@@ -86,6 +91,8 @@ https://goo.gle/window-manager-blog
 - Jetpack 라이브러리에서 접을 수 있는 환경 설정 제공
 
 ![Screens%20large%20small%20and%20foldable/______6-11_screenshot.png](Screens%20large%20small%20and%20foldable/______6-11_screenshot.png)
+
+
 
 # Android CDD
 
@@ -110,6 +117,7 @@ https://source.android.com/compatibility/android-cdd
 - Aspect ratio
 
     9:21 - 1:1 - 21:9
+    
 
 ## 고정 사이즈 설정
 
@@ -129,12 +137,15 @@ Android manifast 플래그로 창의 가로세로 비율 및 크기 고정 가�
 
 ![Screens%20large%20small%20and%20foldable/_2020-07-12__9.35.25.png](Screens%20large%20small%20and%20foldable/_2020-07-12__9.35.25.png)
 
+
 ## Best practices
 
 - Handle orientation and window size changes
 - Test and declare support for resizable windows
 
 → foldable 뿐만 아니라 android, chrome OS에서 원활히 작동
+
+
 
 # Testing
 
@@ -146,6 +157,7 @@ WindowManager API  사용 시, 다양한 화면 크기 설정, 런타임 시에 
 
 ![Screens%20large%20small%20and%20foldable/_2020-07-12__9.41.51.png](Screens%20large%20small%20and%20foldable/_2020-07-12__9.41.51.png)
 
+
 ## Freeform
 
 에뮬레이터 윈도우 설정 환경에 네이티브 자유 방식 타깃 모드 추가
@@ -156,6 +168,7 @@ WindowManager API  사용 시, 다양한 화면 크기 설정, 런타임 시에 
 
 ![Screens%20large%20small%20and%20foldable/_2020-07-12__9.46.03.png](Screens%20large%20small%20and%20foldable/_2020-07-12__9.46.03.png)
 
+
 ## Foldables
 
 Hinge 센서 API와 통합하여 Jetpack Window Manager 기능을 지원 예정
@@ -165,6 +178,8 @@ Hinge 센서 API와 통합하여 Jetpack Window Manager 기능을 지원 예정
 - 동시에 구부러지는 화면 상에서 구현될 모습 재현
 
 ![Screens%20large%20small%20and%20foldable/_2020-07-12__9.51.45.png](Screens%20large%20small%20and%20foldable/_2020-07-12__9.51.45.png)
+
+
 
 # APIs
 
@@ -179,6 +194,7 @@ Hinge 센서 API와 통합하여 Jetpack Window Manager 기능을 지원 예정
 - Display#getMetrics()
 - WindowManager#getDefaultDisplay()
     - 초기 android에서 단일 화면 기기의 크기를 제대로 조정하지 못했고 호환성을 위해 현재 창의 크기에 맞는 조정된 값을 되돌려 보냈기 때문
+
 
 ## New APIs
 
@@ -216,6 +232,7 @@ Hinge 센서 API와 통합하여 Jetpack Window Manager 기능을 지원 예정
 
 - 일부 다른 Window Manager API에 맞는 컨텍스트의 잠재적인 오용에 대해 Lint와 StrictMode에 새로운 경고 사항을 추가 중
 
+
 ## Hinge sensor
 
 기기가 열리거나 닫힐 때 사용자 지정 애니메이션을 사용할 수 있다.
@@ -225,6 +242,8 @@ Hinge 센서 API와 통합하여 Jetpack Window Manager 기능을 지원 예정
 - 값의 범위가 기기마다 다를 수 있음 0~180도, 0 ~ 360도
 
 ![Screens%20large%20small%20and%20foldable/______14-21_screenshot.png](Screens%20large%20small%20and%20foldable/______14-21_screenshot.png)
+
+
 
 # Recap
 
