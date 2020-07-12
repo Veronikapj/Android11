@@ -17,7 +17,7 @@ media player
 
 # Conversations
 
-![What%20s%20new%20in%20System%20UI%20/_______()_2-30_screenshot.png](What%20s%20new%20in%20System%20UI%20/_______()_2-30_screenshot.png)
+![Whats%20new%20in%20System%20UI%20/_______()_2-30_screenshot.png](What%20s%20new%20in%20System%20UI%20/_______()_2-30_screenshot.png)
 
 1. 분리 공간 생성
 2. 읽지 않은 메시지 
@@ -77,7 +77,7 @@ val notification = Notification.Builder(
 
 사용자가 실제로 참여하고 있는 대화를 바탕으로 휴대폰 화면의 상단에 버블 상태로 띄워 진다.
 
-![What%20s%20new%20in%20System%20UI%20/_______()_4-41_screenshot.png](What%20s%20new%20in%20System%20UI%20/_______()_4-41_screenshot.png)
+![Whats%20new%20in%20System%20UI%20/_______()_4-41_screenshot.png](What%20s%20new%20in%20System%20UI%20/_______()_4-41_screenshot.png)
 
 BubbleMetadata 사용
 
@@ -88,7 +88,7 @@ BubbleMetadata 사용
 
 # Device Controls
 
-![What%20s%20new%20in%20System%20UI%20/_______()_5-4_screenshot.png](What%20s%20new%20in%20System%20UI%20/_______()_5-4_screenshot.png)
+![Whats%20new%20in%20System%20UI%20/_______()_5-4_screenshot.png](What%20s%20new%20in%20System%20UI%20/_______()_5-4_screenshot.png)
 
 전원 메뉴를 새롭게 단장
 
@@ -97,7 +97,7 @@ BubbleMetadata 사용
 - Device-controls providers를 위한 새로운 api 출시
 - 자바 9 Reactive Streams api 중 하나
 
-![What%20s%20new%20in%20System%20UI%20/_______()_6-15_screenshot.png](What%20s%20new%20in%20System%20UI%20/_______()_6-15_screenshot.png)
+![Whats%20new%20in%20System%20UI%20/_______()_6-15_screenshot.png](What%20s%20new%20in%20System%20UI%20/_______()_6-15_screenshot.png)
 
 1. createPublisherForAllAvailable 
     - Reactive Stream에서 publisher는 변화에 따라 Object의 newInstance 생산
@@ -114,7 +114,7 @@ BubbleMetadata 사용
 
 ### Code example
 
-![What%20s%20new%20in%20System%20UI%20/_______()_6-53_screenshot.png](What%20s%20new%20in%20System%20UI%20/_______()_6-53_screenshot.png)
+![Whats%20new%20in%20System%20UI%20/_______()_6-53_screenshot.png](What%20s%20new%20in%20System%20UI%20/_______()_6-53_screenshot.png)
 
 control을 이끌어내는 방법을 시스템 UI에게 알려주며 마지막에 일부 상태를 보유한 control builder 에서 모든 사항을 함께 적용.
 
@@ -122,7 +122,7 @@ control을 이끌어내는 방법을 시스템 UI에게 알려주며 마지막�
 
 # Media Player
 
-![What%20s%20new%20in%20System%20UI%20/_______()_8-6_screenshot.png](What%20s%20new%20in%20System%20UI%20/_______()_8-6_screenshot.png)
+![Whats%20new%20in%20System%20UI%20/_______()_8-6_screenshot.png](What%20s%20new%20in%20System%20UI%20/_______()_8-6_screenshot.png)
 
 1. MediaStyle Notification (Android Lollipop)
     - 미디어 재생을 위해 계속 remote view 를 사용하지 않아도 됨
