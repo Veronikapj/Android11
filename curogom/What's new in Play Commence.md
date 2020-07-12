@@ -23,7 +23,7 @@ Google에서는 사용자와 개발자가 서로 믿을 수 있는 커머스 환
 
   - 입금 취소로 인한 손실 50% 방지
 
-    ![image-20200712000648650](/Users/curogom/Library/Application Support/typora-user-images/image-20200712000648650.png)
+    ![image-20200712000648650](https://raw.githubusercontent.com/Veronikapj/Android11/curogom/curogom/resources/)
 
 #### 사용자가 개발자를 신뢰 할 수 있는 기능
 
