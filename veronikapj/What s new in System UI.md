@@ -1,9 +1,7 @@
 # What's new in System UI
 
-Created By: PilJu BAE
-Last Edited: Jul 12, 2020 12:00 AM
 Links: https://youtu.be/oLLUDOQxJS8
-events: Sessions, android11
+
 
 # Features
 
