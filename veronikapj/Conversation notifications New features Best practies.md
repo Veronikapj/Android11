@@ -1,7 +1,5 @@
 # Conversation notifications: New features Best practices
 
-Created By: PilJu BAE
-Last Edited: Jul 19, 2020 8:07 PM
 Links: https://youtu.be/CKlVSvFyt3s
 
 # Goal
