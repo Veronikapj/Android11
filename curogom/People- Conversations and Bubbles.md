@@ -2,7 +2,7 @@
 
 # People: Conversations and Bubbles
 
-[코드랩 링크][https://developer.android.com/codelabs/android-people?return=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-week1-people-identity%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fandroid-people#1]
+[코드랩 링크](https://developer.android.com/codelabs/android-people?return=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-week1-people-identity%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fandroid-people#1)
 
 ## Codelab Overview
 
@@ -172,8 +172,12 @@ git clone https://github.com/googlecodelabs/android-people.git
 
 우선 초심자라면 Notification에 대한 기초 코드랩 부터 차근차근 진행 후에 이 코드랩을 진행하는 것이 좋을 것 같음.
 
-[Notification과 관련 Android Docs][https://developer.android.com/guide/topics/ui/notifiers/notifications]
-[Notification과 관련 Codelabs][https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-notifications/index.html?index=..%2F..index#0]
-[Bubbles와 관련 Android Docs][https://developer.android.com/guide/topics/ui/bubbles]
-[Original Git Repo][https://github.com/googlecodelabs/android-people]
-[Fork Git Repo][https://github.com/CuroGom/android-people/tree/done]
+[Notification과 관련 Android Docs](https://developer.android.com/guide/topics/ui/notifiers/notifications)
+
+[Notification과 관련 Codelabs](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-notifications/index.html?index=..%2F..index#0)
+
+[Bubbles와 관련 Android Docs](https://developer.android.com/guide/topics/ui/bubbles)
+
+[Original Git Repo](https://github.com/googlecodelabs/android-people)
+
+[Fork Git Repo](https://github.com/CuroGom/android-people/tree/done)
