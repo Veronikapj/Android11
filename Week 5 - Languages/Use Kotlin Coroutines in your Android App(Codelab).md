@@ -1,9 +1,5 @@
 # Use Kotlin Coroutines in your Android App
-
-Created By: PilJu BAE
-Last Edited: Aug 9, 2020 6:22 PM
 Links: https://developer.android.com/codelabs/kotlin-coroutines?authuser=1&return=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-week5-languages%3Fauthuser%3D1%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fkotlin-coroutines#0
-events: Code, android11
 
 # Overview
 
