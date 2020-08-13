@@ -1,9 +1,7 @@
 # Dependency Injection on Android with Hilt
 
-Created By: PilJu BAE
-Last Edited: Aug 13, 2020 4:29 PM
 Links: https://medium.com/androiddevelopers/dependency-injection-on-android-with-hilt-67b6031e62d
-events: android11
+
 
 ### [Dependency injection (DI)](https://developer.android.com/training/dependency-injection)
 
