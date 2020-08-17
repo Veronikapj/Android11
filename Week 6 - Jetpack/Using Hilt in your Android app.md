@@ -176,7 +176,7 @@ class LoggerLocalDataSource @Inject constructor(private val logDao: LogDao) {
 @InstallIn(ApplicationComponent:class)
 @Module
 object DatabaseModule {
-  	@Provides
+    @Provides
     @Singleton // It has to be unique instance throughout the app
     fun provideDatabase(@ApplicationContext appContext: Context): AppDatabase {
         return Room.databaseBuilder(
@@ -186,7 +186,7 @@ object DatabaseModule {
         ).build()
     }
   
-		@Provides
+    @Provides
     fun provideLogDao(database: AppDatabase): LogDao {
         return database.logDao()
     }
