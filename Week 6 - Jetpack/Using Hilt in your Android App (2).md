@@ -107,7 +107,7 @@ So we can annotate this implementation of `LoggerDataSource` like below.
 @AndroidEntryPoint
 class LogsFragment : Fragment() {
   
-		@InMemoryLogger
+    @InMemoryLogger
     @Inject lateinit var logger: LoggerDataSource
     ...
 }
@@ -118,7 +118,7 @@ Or if we use Database module instead, see below.
 ```kotlin
 class LogsFragment : Fragment() {
   
-		@DatabaseLogger
+    @DatabaseLogger
     @Inject lateinit var logger: LoggerDataSource
     ...
 }
