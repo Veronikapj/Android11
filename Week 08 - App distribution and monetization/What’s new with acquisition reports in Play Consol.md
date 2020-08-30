@@ -17,8 +17,6 @@ User acquisition > Acquisition reports
 - Store analysis
 - Conversion analysis
 
-    ![res/Whats_new_with_acquisition_reports_in_Play_Console_0-48_screenshot.png](res/Whats_new_with_acquisition_reports_in_Play_Console_0-48_screenshot.png)
-
     시간이 지남에 따라 스토어 실적을 더 잘 모니터링 할 수 있도록 데이터를 시계열 보기로 표시 해주고 있음
 
     ![res/Whats_new_with_acquisition_reports_in_Play_Console_0-57_screenshot.png](res/Whats_new_with_acquisition_reports_in_Play_Console_0-57_screenshot.png)
