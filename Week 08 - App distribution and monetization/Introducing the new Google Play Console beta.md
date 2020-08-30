@@ -10,11 +10,14 @@
 ### 1.1 New Navigation (새로운 네비게이션)
 
 - 새로운 navigation
+
     - 현 콘솔
-    ![](./introducing_console/console_navi.png)
+    
+    ![](./introducing_console/console_navi.png){: width="70%"}
     
     - 베타 콘솔
-    ![](./introducing_console/console_beta_navi.png)
+    
+    ![](./introducing_console/console_beta_navi.png){: width="70%"}
     
 - navigation 그룹은 달성하려는 기능을 기반으로 관련 기능을 그룹화
     - ex 획득 설정,보고 및 최적화 도구가 이제 단일 "성장"섹션에 수집
