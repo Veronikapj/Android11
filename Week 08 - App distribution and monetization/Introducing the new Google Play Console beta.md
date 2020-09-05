@@ -13,7 +13,7 @@
 
     - 현 콘솔
     
-    ![](./introducing_console/console_navi.png){: width="70%"}
+    ![](./introducing_console/console_navi.png){: width="10%" height="10%"}
     
     - 베타 콘솔
     
