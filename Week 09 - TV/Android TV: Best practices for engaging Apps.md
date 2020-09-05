@@ -7,7 +7,7 @@
 - Android TV는 미디어, 게임, 음악을 한곳에 모아 놓은 Google의 TV 플랫폼
 - 상위 10 대 스마트 TV 제조업체 중 7 개가 Android TV가 탑재 된 TV를 만들고 있다.
 
-## 2. What makes an Android app an Android TV app?()
+## 2. What makes an Android app an Android TV app
 
 - TV앱 시작 하는 법에 대해서 이야기 하고 있음
 - TV앱의 경우 리모컨을 통해서 상호작용하므로 터치스크린을 사용하지 않는다고 선언
