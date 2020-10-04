@@ -1,9 +1,10 @@
 # We Recommend Material Design Components
 
 Created By: PilJu BAE
+
 Links: https://medium.com/androiddevelopers/we-recommend-material-design-components-81e6d165c2dd
 
-[d.android.com/design](http://d.android.com/design)
+### [d.android.com/design](http://d.android.com/design)
 
 안드로이드 앱이 플랫폼과 일치하는 형태로 보이길 기대
 
