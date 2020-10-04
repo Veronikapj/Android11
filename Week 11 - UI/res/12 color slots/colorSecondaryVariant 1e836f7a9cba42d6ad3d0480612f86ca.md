@@ -1,0 +1,3 @@
+# colorSecondaryVariant
+
+Source: MDC

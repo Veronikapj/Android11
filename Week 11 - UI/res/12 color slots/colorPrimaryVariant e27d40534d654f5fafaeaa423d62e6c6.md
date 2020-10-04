@@ -1,0 +1,3 @@
+# colorPrimaryVariant
+
+Source: MDC

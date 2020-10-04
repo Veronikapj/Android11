@@ -1,0 +1,3 @@
+# android:colorBackground
+
+Source: Platform

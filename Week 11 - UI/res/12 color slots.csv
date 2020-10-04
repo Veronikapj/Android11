@@ -1,0 +1,14 @@
+﻿Color attribute,Source
+colorPrimary,AppCompat
+colorPrimaryVariant,MDC
+colorOnPrimary,MDC
+colorSecondary,MDC
+colorSecondaryVariant,MDC
+colorOnSecondary,MDC
+colorSurface,MDC
+colorOnSurface,MDC
+android:colorBackground,Platform
+colorOnBackground,MDC
+colorError,AppCompat
+colorOnError,MDC
+"additional custom color slots .. ",
