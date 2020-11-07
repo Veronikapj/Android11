@@ -59,7 +59,7 @@
        
        fun getLocation() {
          val locationManager = attributionContext
-         											.getSystemService(LocationManager::class.java) as LocationManager
+                                .getSystemService(LocationManager::class.java) as LocationManager
        }
      }
      ```
