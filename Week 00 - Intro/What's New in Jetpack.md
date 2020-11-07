@@ -34,9 +34,9 @@
      ```kotlin
      @AndroidEntryPoint
      class SearchFragment:Fragment(){
-     	@Inject
-       lateinit var foo:Foo
-       val viewModel:SearchViewModel by viewModels<>()
+         @Inject
+         lateinit var foo:Foo
+         val viewModel:SearchViewModel by viewModels<>()
      }
      
      class SearchViewModel @ViewModelInject constructor(
@@ -57,10 +57,10 @@
      @InstallIn(ApplicationComponent::class)
      @Module
      object AppModule {
-     	@Provides
-     	fun provideDb(app:Application):MyDatabase {
-     		...
-     	}
+         @Provides
+         fun provideDb(app:Application):MyDatabase {
+             ...
+         }
      }
      ```
 
@@ -95,7 +95,6 @@ class WorkManagerInitializer : Initializer<WorkManager> {
 ### Android Game SDK
 
 1. Gaming support now in Jetpack!
-
 2. Two important modules in Gaming SDK
 
    * Frame pacing API - to maintain a steady frame rate and lower input latency (detect the expected frame rate and auto-adjust frame presentation times)
@@ -146,7 +145,6 @@ class WorkManagerInitializer : Initializer<WorkManager> {
 ### Navigation
 
 1. allows us to navigate between different screens of the app easily
-
 2. Navigation 2.3
 
    * Supports Dynamic feature modules, with corresponding classes annotated.
