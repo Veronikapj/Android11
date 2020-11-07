@@ -78,15 +78,15 @@
 
 ```kotlin
 class WorkManagerInitializer : Initializer<WorkManager> {
-	override fun create(context:Context):WorkManager {
-		val configuration = Configuration.Builder()
+    override fun create(context:Context):WorkManager {
+        val configuration = Configuration.Builder()
     		.setMinimumLoggingLevel(Log.DEBUG)
     		.build()
-    WorkManager.initialize(context, configuration)
-    return WorkManager.getInstance(context)
-	}
+    	WorkManager.initialize(context, configuration)
+        return WorkManager.getInstance(context)
+    }
 	
-	override fun dependencies(): List<Class<out Initializer<*>> = emptyList()
+    override fun dependencies(): List<Class<out Initializer<*>> = emptyList()
 }
 ```
 
