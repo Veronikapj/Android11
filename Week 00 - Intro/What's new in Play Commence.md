@@ -23,7 +23,7 @@ Google에서는 사용자와 개발자가 서로 믿을 수 있는 커머스 환
 
   - 입금 취소로 인한 손실 50% 방지
 
-    ![image-20200712000648650](https://raw.githubusercontent.com/Veronikapj/Android11/curogom/curogom/resources/image-20200712000648650.png?token=AJV376CITBRPUCZRQZWYSF27BLQJW)
+    ![image-20200712000648650](res/image-20200712000648650.png)
 
 #### 사용자가 개발자를 신뢰 할 수 있는 기능
 
@@ -66,17 +66,17 @@ Google에서는 사용자와 개발자가 서로 믿을 수 있는 커머스 환
 
 - 구독 고객의 계정 정지 / 유예 기간을 두는 시스템의 적용
   - 8% 낮은 비자발적인 이탈 / 35% 더 높은 재 결재 비율을 보임.
-  - ![image-20200712003456826](https://raw.githubusercontent.com/Veronikapj/Android11/curogom/curogom/resources/image-20200712003456826.png?token=AJV376D6X35XOHSBXHYIDAK7BLQYW)
+  - ![image-20200712003456826](res/image-20200712003456826.png)
 - 당장 올 해 11월 부터 계정 정지 / 복구가 필수 사항으로 변경 됨.
 
-![image-20200712003516240](https://raw.githubusercontent.com/Veronikapj/Android11/curogom/curogom/resources/image-20200712003516240.png?token=AJV376BI2G3FD2LY5S5C5AK7BLQ2Y)
+![image-20200712003516240](res/image-20200712003516240.png)
 
 - Subscription benefits
 
   유저 이탈을 줄이고자 구독 취소 시점에 구독에 대한 혜택 사항을 다시 한 번 리마인드 할 수 있도록 별도의 팝업을 제공
   (흔히 스트리밍 뮤직 서비스인 멜론과 지니 등에서 이용권 해지 시 자주 볼 수 있었던 '그 것'.)
 
-![image-20200712003732855](https://raw.githubusercontent.com/Veronikapj/Android11/curogom/curogom/resources/image-20200712003732855.png?token=AJV376AUJKFY3JMM7L5TZUK7BLQ4U)
+![image-20200712003732855](res/image-20200712003732855.png)
 
 
 
@@ -92,6 +92,6 @@ Google에서는 사용자와 개발자가 서로 믿을 수 있는 커머스 환
 
 #### Billing Library
 
-![image-20200712004054610](https://raw.githubusercontent.com/Veronikapj/Android11/curogom/curogom/resources/image-20200712004054610.png?token=AJV376GZOPPQOA6DZ2YLRPS7BLQ6W)
+![image-20200712004054610](res/image-20200712004054610.png)
 
-![image-20200712004118086](https://raw.githubusercontent.com/Veronikapj/Android11/curogom/curogom/resources/image-20200712004118086.png?token=AJV376DGX3RZDY2AE6PNMXS7BLQ6Q)
+![image-20200712004118086](res/image-20200712004118086.png)
